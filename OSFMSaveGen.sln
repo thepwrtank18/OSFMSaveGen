@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSFMSaveGen", "OSFMSaveGen\OSFMSaveGen.csproj", "{9612E866-7EB3-4A46-B4BD-C59E40D0EE43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9612E866-7EB3-4A46-B4BD-C59E40D0EE43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9612E866-7EB3-4A46-B4BD-C59E40D0EE43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9612E866-7EB3-4A46-B4BD-C59E40D0EE43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9612E866-7EB3-4A46-B4BD-C59E40D0EE43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15145095-A877-42FF-A98F-1992481B84FF}
+	EndGlobalSection
+EndGlobal

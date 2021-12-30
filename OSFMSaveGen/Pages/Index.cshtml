@@ -1,0 +1,113 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Post Solstice Save Generator";
+}
+
+<!-- the styling -->
+<style>
+    html {
+        font-size: 14px;
+    }
+    
+    @@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+    }
+
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        margin-bottom: 60px;
+    }
+
+    a.navbar-brand[b-40xb5fdxvz] {
+        white-space: normal;
+        text-align: center;
+        word-break: break-all;
+    }
+
+    a[b-40xb5fdxvz] {
+        color: #0077cc;
+    }
+
+    .btn-primary[b-40xb5fdxvz] {
+        color: #fff;
+        background-color: #1b6ec2;
+        border-color: #1861ac;
+    }
+
+    .nav-pills .nav-link.active[b-40xb5fdxvz], .nav-pills .show > .nav-link[b-40xb5fdxvz] {
+        color: #fff;
+        background-color: #1b6ec2;
+        border-color: #1861ac;
+    }
+
+    .border-top[b-40xb5fdxvz] {
+        border-top: 1px solid #e5e5e5;
+    }
+    .border-bottom[b-40xb5fdxvz] {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .box-shadow[b-40xb5fdxvz] {
+        box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    }
+
+    button.accept-policy[b-40xb5fdxvz] {
+        font-size: 1rem;
+        line-height: inherit;
+    }
+
+    .footer[b-40xb5fdxvz] {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        white-space: nowrap;
+        line-height: 60px;
+    }
+</style>
+
+<!-- the code -->
+<script language="javascript">
+    // stolen from rkevin
+    function downloadsave() {
+        var input = document.getElementById("input").value;
+        if (input.length == 0) {
+            alert("Please enter the player name!");
+            return;
+        } else if (input.length >= 100) {
+            alert("Player name too long!");
+            return;
+        }
+        var prefix = atob("BAhbHkZUVFRURkZGRlRGRkZGRkZGRkZGRkZGRkYECFseaQBpB2kAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQAECEki")
+        var suffix = atob("BjoGRVQ=")
+        var save = prefix + String.fromCharCode(5 + input.length) + input + suffix;
+        var blob = new Blob([save], {type: "application/octet-stream"});
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.setAttribute("download", "p-settings.dat");
+        a.click();
+    }
+</script>
+
+<!-- the design -->
+This generates a post Solstice save file for OneShot, for those who lost their save but want to play OneShot: Fading Memory without replaying the base game.<br/>
+Do not use if you haven't beaten Solstice yet, since you'd be missing a ton of context.<br/>    
+Also, you may consider replaying the base game with OSFM installed anyway, since there are subtle easter eggs you might find.<br/>
+For questions, report <a href="https://github.com/thewprtank18/OSFMSaveGen/issues">here</a>.<br/>
+<hr/>
+<form action="javascript:void(0)">
+    <label for="input">Your in-game name:</label>
+    <input id="input" type="text">
+</form>
+<button onclick="downloadsave()">Save File</button>
+<p>​ </p> <!-- Zero width space here-->
+Copy the downloaded <code>p-settings.dat</code> to:<br/>
+Windows: %appdata%\OSFM<br/>
+Linux: ~/.local/share/OSFM/<br/>
+Make sure to delete `save.dat` from the same directory.
