@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Solstice Save Generator</title>
     <link rel="stylesheet" href="./bootstrap.min.css">
-    <link rel="stylesheet" href="./site.css">
-    <link rel="stylesheet" href="./OSFMSaveGen.styles.css">
 </head>
 <body>
     <header>
@@ -96,6 +94,7 @@
 
 <!-- the code -->
 <script language="javascript">
+    // stolen from rkevin
     function downloadsave() {
         var input = document.getElementById("input").value;
         if (input.length == 0) {
@@ -105,8 +104,8 @@
             alert("Player name too long!");
             return;
         }
-        var prefix = atob("BAhbHkZUVFRURkZGRlRGRkZGRkZGRkZGRkZGRkYECFseaQBpB2kAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQAECEki")
-        var suffix = atob("BjoGRVQ=")
+        var prefix = atob("BAhbHkZUVFRURkZGRlRGRkZGRkZGRkZGRkZGRkYECFseaQBpB2kAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQAECEki");
+        var suffix = atob("BjoGRVQ=");
         var save = prefix + String.fromCharCode(5 + input.length) + input + suffix;
         var blob = new Blob([save], {type: "application/octet-stream"});
         var a = document.createElement("a");
@@ -127,7 +126,7 @@ For any issues, report <a href="https://github.com/thepwrtank18/OSFMSaveGen/issu
     <input id="input" type="text">
 </form>
 <button onclick="downloadsave()">Save File</button>
-<p>​ </p> <!-- Zero width space here-->
+<p><wbr></p> <!-- indicates line break without line -->
 Copy the downloaded <code>p-settings.dat</code> to:<br>
 Windows: %appdata%\OSFM<br>
 Linux: ~/.local/share/OSFM/<br>
@@ -141,9 +140,9 @@ Make sure to delete `save.dat` from the same directory.
         </div>
     </footer>
 
-    <script src="./jquery.min.js.download"></script>
-    <script src="./bootstrap.bundle.min.js.download"></script>
-    <script src="./site.js.download"></script>
+    <script src="./Post Solstice Save Generator_files/jquery.min.js.download"></script>
+    <script src="./Post Solstice Save Generator_files/bootstrap.bundle.min.js.download"></script>
+    <script src="./Post Solstice Save Generator_files/site.js.download"></script>
 
     
 
