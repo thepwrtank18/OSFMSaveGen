@@ -84,8 +84,8 @@
             alert("Player name too long!");
             return;
         }
-        var prefix = atob("BAhbHkZUVFRURkZGRlRGRkZGRkZGRkZGRkZGRkYECFseaQBpB2kAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQAECEki")
-        var suffix = atob("BjoGRVQ=")
+        var prefix = atob("BAhbHkZUVFRURkZGRlRGRkZGRkZGRkZGRkZGRkYECFseaQBpB2kAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQBpAGkAaQAECEki");
+        var suffix = atob("BjoGRVQ=");
         var save = prefix + String.fromCharCode(5 + input.length) + input + suffix;
         var blob = new Blob([save], {type: "application/octet-stream"});
         var a = document.createElement("a");
@@ -99,14 +99,14 @@
 This generates a post Solstice save file for OneShot, for those who lost their save but want to play OneShot: Fading Memory without replaying the base game.<br/>
 Do not use if you haven't beaten Solstice yet, since you'd be missing a ton of context.<br/>    
 Also, you may consider replaying the base game with OSFM installed anyway, since there are subtle easter eggs you might find.<br/>
-For questions, report <a href="https://github.com/thewprtank18/OSFMSaveGen/issues">here</a>.<br/>
+For any issues, report <a href="https://github.com/thepwrtank18/OSFMSaveGen/issues">here</a>.<br/>
 <hr/>
 <form action="javascript:void(0)">
     <label for="input">Your in-game name:</label>
     <input id="input" type="text">
 </form>
 <button onclick="downloadsave()">Save File</button>
-<p>​ </p> <!-- Zero width space here-->
+<p><wbr/></p> <!-- indicates line break without line -->
 Copy the downloaded <code>p-settings.dat</code> to:<br/>
 Windows: %appdata%\OSFM<br/>
 Linux: ~/.local/share/OSFM/<br/>
