@@ -9,7 +9,7 @@ If someone can tell me how to automate this, *please* tell me.
 3. Go to "Publish".
 4. Click the "Publish" button, and wait until it finishes.
 5. Click "Open folder". Run OSFMSaveGen.exe from there.
-6. Go to this URL: https://127.0.0.1:5000
+6. Go to this URL: http://127.0.0.1:5000
 7. Press <kbd>Ctrl</kbd>+<kbd>S</kbd>.
 8. Save as a complete HTML, and put in a directory. Make sure it is named "indexa.html" for this.
 9. Rename "indexa.html" to "index.html". Ignore the warnings.
