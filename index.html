@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://localhost:5000/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +9,7 @@
     <header>
         <nav b-40xb5fdxvz="" class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div b-40xb5fdxvz="" class="container">
-                <a class="navbar-brand" href="http://localhost:5000/">OSFM Save Generator</a>
-                <button b-40xb5fdxvz="" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span b-40xb5fdxvz="" class="navbar-toggler-icon"></span>
-                </button>
+                <a b-40xb5fdxvz="" class="navbar-brand" style="color:#ffffff">OSFM Save Generator</a>
                 <div b-40xb5fdxvz="" class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul b-40xb5fdxvz="" class="navbar-nav flex-grow-1">
                     </ul>
@@ -31,9 +27,9 @@
     }
     
     @media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
+        html {
+            font-size: 16px;
+        }
     }
 
     html {
@@ -43,6 +39,10 @@
 
     body {
         margin-bottom: 60px;
+        background-image: url('./images.jpg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: cover;
     }
 
     a.navbar-brand[b-40xb5fdxvz] {
@@ -90,6 +90,10 @@
         white-space: nowrap;
         line-height: 60px;
     }
+
+    .bg-white {
+        --bs-bg-opacity: .5;
+    }
 </style>
 
 <!-- the code -->
@@ -116,27 +120,36 @@
 </script>
 
 <!-- the design -->
-This generates a post Solstice save file for OneShot, for those who lost their save but want to play OneShot: Fading Memory without replaying the base game.<br>
-Do not use if you haven't beaten Solstice yet, since you'd be missing a ton of context.<br>    
-Also, you may consider replaying the base game with OSFM installed anyway, since there are subtle easter eggs you might find.<br>
-For any issues, report <a href="https://github.com/thepwrtank18/OSFMSaveGen/issues">here</a>.<br>
-<hr>
-<form action="javascript:void(0)">
-    <label for="input">Your in-game name:</label>
-    <input id="input" type="text">
-</form>
-<button onclick="downloadsave()">Save File</button>
-<p><wbr></p> <!-- indicates line break without line -->
-Copy the downloaded <code>p-settings.dat</code> to:<br>
-Windows: %appdata%\OSFM<br>
-Linux: ~/.local/share/OSFM/<br>
-Make sure to delete `save.dat` from the same directory.
+<div style="color:#ffffff">
+    This generates a post Solstice save file for OneShot, for those who lost their save but want to play OneShot: Fading Memory without replaying the base game.<br>
+    Do not use if you haven't beaten Solstice yet, since you'd be missing a ton of context.<br>
+    Also, you may consider replaying the base game with OSFM installed anyway, since there are subtle easter eggs you might find.<br>
+    For any issues, report <a href="https://github.com/thepwrtank18/OSFMSaveGen/issues">here</a>.<br>
+    <hr>
+
+    <form action="javascript:void(0)">
+        <label for="input">Your in-game name:</label>
+        <input id="input" type="text">
+    </form>
+    <button onclick="downloadsave()">Save File</button>
+    <p><wbr></p> <!-- indicates line break without line -->
+
+    Copy the downloaded <code>p-settings.dat</code> to:<br>
+    Windows: %appdata%\OSFM<br>
+    Linux: ~/.local/share/OSFM/<br>
+    Make sure to delete `save.dat` from the same directory.<br>
+</div>
         </main>
     </div>
 
     <footer b-40xb5fdxvz="" class="border-top footer text-muted">
-        <div b-40xb5fdxvz="" class="container">
-            OSFMSaveGen
+        <div b-40xb5fdxvz="" class="container" style="color:#ffffff">
+            OSFMSaveGen - <a b-40xb5fdxvz="" href="https://github.com/thepwrtank18/OSFMSaveGen">GitHub</a>
         </div>
-    </footer>   
+    </footer>
+
+    <script src="./bootstrap.bundle.min.js.download"></script>
+
+
+
 </body></html>
