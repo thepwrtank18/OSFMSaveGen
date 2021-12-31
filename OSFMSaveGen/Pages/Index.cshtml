@@ -104,6 +104,8 @@
 </script>
 
 <!-- the design -->
+<link rel="icon" type="image/x-icon" href="./favicon.ico"/>
+
 <div style="color:#ffffff">
     This generates a post Solstice save file for OneShot, for those who lost their save but want to play OneShot: Fading Memory without replaying the base game.<br/>
     Do not use if you haven't beaten Solstice yet, since you'd be missing a ton of context.<br/>
@@ -113,9 +115,9 @@
 
     <form action="javascript:void(0)">
         <label for="input">Your in-game name:</label>
-        <input id="input" type="text">
+        <input style="opacity:.75" id="input" type="text">
     </form>
-    <button onclick="downloadsave()">Save File</button>
+    <button style="opacity:.75" onclick="downloadsave()">Save File</button>
     <p><wbr/></p> <!-- indicates line break without line -->
 
     Copy the downloaded <code>p-settings.dat</code> to:<br/>
