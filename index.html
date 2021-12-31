@@ -19,7 +19,7 @@
     </header>
     <div b-40xb5fdxvz="" class="container">
         <main b-40xb5fdxvz="" role="main" class="pb-3">
-
+            
 <!-- the styling -->
 <style>
     html {
@@ -91,6 +91,19 @@
         line-height: 60px;
     }
 
+    .notes { 
+        margin-bottom: 15px; 
+        padding: 4px 12px; 
+    } 
+ 
+ 
+    .warning_rounded { 
+        background-color: #ffffcc; 
+        border-radius: 10px 10px 10px 10px;
+        color: black;
+        opacity: .5;
+    }
+
     .bg-white {
         --bs-bg-opacity: .5;
     }
@@ -98,6 +111,16 @@
 
 <!-- the code -->
 <script language="javascript">
+
+    function startup() {
+        var button = document.getElementById("saveFile");
+        var label = document.getElementById("input");
+        button.disabled = false; // enables button if js is enabled
+        label.disabled = false;
+    }
+
+    window.onload = startup;
+
     // stolen from rkevin
     function downloadsave() {
         var input = document.getElementById("input").value;
@@ -120,7 +143,7 @@
 </script>
 
 <!-- the design -->
-<link rel="icon" type="image/x-icon" href="http://localhost:5000/favicon.ico">
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
 
 <div style="color:#ffffff">
     This generates a post Solstice save file for OneShot, for those who lost their save but want to play OneShot: Fading Memory without replaying the base game.<br>
@@ -128,12 +151,16 @@
     Also, you may consider replaying the base game with OSFM installed anyway, since there are subtle easter eggs you might find.<br>
     For any issues, report <a href="https://github.com/thepwrtank18/OSFMSaveGen/issues">here</a>.<br>
     <hr>
-
+    <noscript>
+        <div class="warning_rounded notes"> 
+            <p>JavaScript must be enabled for a custom name. Click <a href="./p-settings.dat">here</a> to download a pre-made file (File's name is "Player").</p> 
+        </div>
+    </noscript>
     <form action="javascript:void(0)">
         <label for="input">Your in-game name:</label>
         <input style="opacity:.75" id="input" type="text">
     </form>
-    <button style="opacity:.75" onclick="downloadsave()">Save File</button>
+    <button style="opacity:.75" onclick="downloadsave()" id="saveFile">Save File</button>
     <p><wbr></p> <!-- indicates line break without line -->
 
     Copy the downloaded <code>p-settings.dat</code> to:<br>
@@ -149,4 +176,5 @@
             OSFMSaveGen - <a b-40xb5fdxvz="" href="https://github.com/thepwrtank18/OSFMSaveGen">GitHub</a>
         </div>
     </footer>
+
 </body></html>
